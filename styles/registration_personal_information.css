@@ -68,6 +68,7 @@
 .stage_container_one div{
     border: none;
 }
+
 /* input_container */
 
 .input_container{
@@ -136,88 +137,6 @@
     opacity: 0.5;
 }
 
-/* Experience_information_input_container  class */
-
-.experience_container{
-    position: absolute;
-    top: 407px;
-    padding-inline: 16px;
-}
-.arrow {
-    border: solid black;
-    border-width: 0 3px 3px 0;
-    display: inline-block;
-    padding: 3px;
-  }
-.down {
-    transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);
-  }
-
-.dropdown_Seclect{
-    display: flex;
-
-}
-.select{
-    display: flex;
-    align-items: center;
-    padding: 8px 16px;
-    cursor: pointer;
-    border: 1px solid black;
-}
-.select .arrow{
-    margin-left:30px ;
-}
-.selected {
-    width: 312px;
-    height: 30px;
-    display: flex;
-    align-items: center;
-    font-size: 16px;
-}
-.arrow-rotate{
-    transform: rotate(225deg);
-}
-.menu{
-    list-style: none;
-    opacity: 0;
-    display: none;
-    cursor: pointer;
-
-}
-.menu-open{
-    display: block;
-    opacity: 1;
-    z-index:2 ;
-
-}
-
-.menu li{
-    display: flex;
-    align-items: center;
-    width: 352px;
-    justify-content: space-between;
-    border: 1px solid gray;
-    padding-inline: 15px;
-
-}
-.championship{
-    position: absolute;
-    top: 88px;
-    z-index: 1;
-}
-.championship h1{
-    font-size: 16px;
-    font-family: Open sans;
-
-}
-
-.raddio_input{
-    margin-top: 10px;
-}
-.raddio_input .no{
-    margin-left: 15px;
-}
 
 
 

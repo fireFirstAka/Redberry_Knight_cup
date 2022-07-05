@@ -1,0 +1,14 @@
+
+#section--2{
+    background-color: white;
+}
+#section--3{
+    background-image: url('/Picture/unsplash_27LH_0jXKYI\ \(1\).svg');
+}
+
+#section--4{
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

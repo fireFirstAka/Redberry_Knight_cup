@@ -28,6 +28,8 @@ btnBack.addEventListener('click', function(){
     if(currentPage === 1){
         regCont.classList.remove('hidden')
         regExpCont.classList.add('hidden')
+        currentPage = 0;
+
     }
 
 })
@@ -64,6 +66,9 @@ const checkInputs = function(){
     if(answers.some(elem => elem === true)){
         
     }else{
+        if(currentPage === 1){
+            window.open('/lastPage.html')
+        }
         currentPage = 1;
         setTimeout(() =>{
             nextPage()
@@ -115,6 +120,7 @@ dropdowns.forEach(function(elem){
 })
 
 const nextPage = function(){
+    console.log(currentPage)
     if(currentPage === 1){
         regCont.classList.add('hidden')
         regExpCont.classList.remove('hidden')
@@ -127,11 +133,18 @@ const nextPage = function(){
 
 
 
-// class CreateObject {
-//     constructor(name, email , phoneNumber ){
-//         this.email= email;
-//         this.phoneNumber = phoneNumber;
-//         this.name = name;
-//         console.log(this)
-//     }
-// }
+class CreateObject {
+    constructor(name, email , phoneNumber ){
+        this.email= email;
+        this.phoneNumber = phoneNumber;
+        this.name = name;
+        console.log(this)
+    }
+}
+
+
+
+const OpenLastPage = function(){
+
+}
+
