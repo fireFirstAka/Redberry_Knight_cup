@@ -10,6 +10,13 @@
     --Orange: #FD5334;
     --ButtonColor:#212529;
 }
+#back_button a{
+    color: black;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
 .container{
     border: 1px solid black;
     margin: 10px;

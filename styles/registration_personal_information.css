@@ -1,5 +1,5 @@
 @import url("/styles/main_style.css");
-
+@import url(/styles/experience_style.css);
 /* section 2 -- content section */
 #section--2{ background-color:white;}
 #section--2 h1{

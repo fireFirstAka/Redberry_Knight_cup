@@ -16,22 +16,10 @@ const email = document.querySelector('#email')
 const phoneNumber = document.querySelector('#phoneNumber')
 const data = document.querySelector('#data')
 
-let currentPage = 0;
-
 
 btnNext.addEventListener('click', function(e){
     e.preventDefault();
     checkInputs()
-})
-
-btnBack.addEventListener('click', function(){
-    if(currentPage === 1){
-        regCont.classList.remove('hidden')
-        regExpCont.classList.add('hidden')
-        currentPage = 0;
-
-    }
-
 })
 
 
@@ -40,40 +28,55 @@ const checkInputs = function(){
    const userNameValue = userName.value.trim()
    const emailValue= email.value.trim()
    const phoneNumberValue= phoneNumber.value.trim()
-
+   const answers = []
 
    if(5 < userNameValue.length){
     setSucces(userName)
+    answers.push(true)
+    arrayRemove(answers,false)
+    
    }else{
     setError(userName)
+    answers.push(false)
    }
-//    if(emailValue === ''){
-//     setError(email)
-// //    }
-// // //    else if(!isEmail(emailValue)) {
-// // //     setErrorFor(email)
-//     }else{
-//         setSucces(email)
-
-//     }
-    // if(Number(phoneNumberValue.length) < 9 || Number(phoneNumberValue.length) > 9){
-    //     setError(phoneNumber)
-    // }else{
-    //     setSucces(phoneNumber)
-    // }
-
-    const answers = [userName.classList.contains('wrong'),email.classList.contains('wrong'),phoneNumber.classList.contains('wrong')]
-    if(answers.some(elem => elem === true)){
-        
+   if(emailValue === ''){
+    setError(email)
+    answers.push(false)
+   }
+   else if(!isEmail(emailValue)) {
+    setError(email)
+    answers.push(false)
     }else{
-        if(currentPage === 1){
-            window.open('/lastPage.html')
-        }
-        currentPage = 1;
+        setSucces(email)
+        arrayRemove(answers,false)
+        answers.push(true)
+
+    }
+    if(Number(phoneNumberValue.length) < 9 || Number(phoneNumberValue.length) > 9){
+        setError(phoneNumber)
+        answers.push(false)
+    }else{
+        setSucces(phoneNumber)
+        arrayRemove(answers,false)
+        answers.push(true)
+    }
+
+    function arrayRemove(arr, value) { 
+    
+        return arr.filter(function(ele){ 
+            return ele != value; 
+        });
+    }
+    console.log(answers)
+    if(answers.every(elem => elem === true)){
+        console.log(true)
         setTimeout(() =>{
-            nextPage()
-        }, 1000);
-        // new CreateObject(userNameValue, emailValue, phoneNumberValue)
+            window.location.href ='/experience.html'
+        }, 3000);
+
+        new CreateObject(userNameValue, emailValue, phoneNumberValue)
+    }else{
+        console.log('wrong')
     }
 }
 
@@ -96,7 +99,7 @@ function isEmail(email) {
 
 
 
-// /////////////////// dropdown menu
+/////////////////// dropdown menu
 
 dropdowns.forEach(function(elem){
     const select = elem.querySelector('.select')
@@ -119,18 +122,6 @@ dropdowns.forEach(function(elem){
     })
 })
 
-const nextPage = function(){
-    console.log(currentPage)
-    if(currentPage === 1){
-        regCont.classList.add('hidden')
-        regExpCont.classList.remove('hidden')
-    }
-    else{
-        regCont.classList.remove('hidden')
-        regExpCont.classList.add('hidden')
-    }
-}
-
 
 
 class CreateObject {
@@ -142,9 +133,4 @@ class CreateObject {
     }
 }
 
-
-
-const OpenLastPage = function(){
-
-}
 
