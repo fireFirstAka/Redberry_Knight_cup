@@ -2,6 +2,7 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 :root{
@@ -57,4 +58,7 @@
 }
 .btn-primary img{
     margin-left: 12px;
+}
+#section--4{
+ background-color: #FD5334;
 }

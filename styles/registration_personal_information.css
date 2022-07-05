@@ -1,0 +1,218 @@
+@import url("/styles/main_style.css");
+
+/* section 2 -- content section */
+#section--2{ background-color:white;}
+#section--2 h1{
+    font-family: open sans;
+    font-size: 16px;
+    margin-top: 30px;
+    margin-left: 48px;
+    
+}
+/* section --3 Right Header Section */
+#section--3{
+    background-image: url(/Picture/Registration_backgrund.svg);
+}
+/* section --4 registration section */
+#section--4{
+    background-color: white;
+    position: relative;
+    margin-left: 48px;
+}
+
+/* stages first and two */
+.stage_container{
+    display: flex;
+    font-size: 18px;
+    font-family: open sans;
+    position: absolute;
+    top: 60px;
+    
+}
+.stage_container  .stage_container_one{
+    display: flex;
+    flex-direction: column;
+}
+
+.stage_container .two{
+    margin-left: 77px;
+}
+
+.stage_container_one .cube{
+    margin:auto;
+    border: 1px solid black;
+    padding: 8px 15px;
+    border-radius: 8px;
+    font-weight: 700;
+
+
+}
+/* title section  */
+.Title_contianer{
+    position: absolute;
+    top: 240px;
+    font-family: Open Sans;
+    font-weight: 600;
+}
+.Title_contianer h1{
+    font-size: 32px;
+
+}
+.Title_contianer p{
+    font-size: 14px;
+    color: #95939A;
+}
+
+/* input_container */
+
+.input_container{
+    display: flex;
+    flex-direction: column;
+    width: 775px;
+    position: absolute;
+    top: 397px;
+}
+.form-control{
+    width: 775px;
+    height: 46px;
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.form-control input{
+    width: 775px;
+    max-width: 90%;
+    padding: 8px 16px;
+
+}
+.green_button{
+    visibility: hidden;
+    display: none;
+}
+.input_element{
+    border: none;
+}
+
+.wrong{
+    border: 2px solid red;
+
+}
+.correct{
+    display:block;
+    visibility: visible;
+}
+
+
+/* button next and back */
+.buttons{
+    display: flex;
+    position: absolute;
+    top: 789px;
+}
+#back_button{
+   color: black;
+   cursor: pointer;
+}
+#next_button{
+    margin-left: 554px;
+    cursor: pointer;
+
+}
+/* hidden class */
+.hidden{
+    display: none;
+    visibility: hidden;
+}
+
+.opacity-05{
+    opacity: 0.5;
+}
+
+/* Experience_information_input_container  class */
+
+.experience_container{
+    position: absolute;
+    top: 407px;
+    padding-inline: 16px;
+}
+.arrow {
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+  }
+.down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+  }
+
+.dropdown_Seclect{
+    display: flex;
+
+}
+.select{
+    display: flex;
+    align-items: center;
+    padding: 8px 16px;
+    cursor: pointer;
+    border: 1px solid black;
+}
+.select .arrow{
+    margin-left:30px ;
+}
+.selected {
+    width: 312px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+}
+.arrow-rotate{
+    transform: rotate(225deg);
+}
+.menu{
+    list-style: none;
+    opacity: 0;
+    display: none;
+    cursor: pointer;
+
+}
+.menu-open{
+    display: block;
+    opacity: 1;
+    z-index:2 ;
+
+}
+
+.menu li{
+    display: flex;
+    align-items: center;
+    width: 352px;
+    justify-content: space-between;
+    border: 1px solid gray;
+    padding-inline: 15px;
+
+}
+.championship{
+    position: absolute;
+    top: 88px;
+    z-index: 1;
+}
+.championship h1{
+    font-size: 16px;
+    font-family: Open sans;
+
+}
+
+.raddio_input{
+    margin-top: 10px;
+}
+.raddio_input .no{
+    margin-left: 15px;
+}
+
+
+
