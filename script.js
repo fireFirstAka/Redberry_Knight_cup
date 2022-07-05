@@ -45,20 +45,20 @@ const checkInputs = function(){
    }else{
     setError(userName)
    }
-   if(emailValue === ''){
-    setError(email)
-//    }
-// //    else if(!isEmail(emailValue)) {
-// //     setErrorFor(email)
-    }else{
-        setSucces(email)
+//    if(emailValue === ''){
+//     setError(email)
+// //    }
+// // //    else if(!isEmail(emailValue)) {
+// // //     setErrorFor(email)
+//     }else{
+//         setSucces(email)
 
-    }
-    if(Number(phoneNumberValue.length) < 9 || Number(phoneNumberValue.length) > 9){
-        setError(phoneNumber)
-    }else{
-        setSucces(phoneNumber)
-    }
+//     }
+    // if(Number(phoneNumberValue.length) < 9 || Number(phoneNumberValue.length) > 9){
+    //     setError(phoneNumber)
+    // }else{
+    //     setSucces(phoneNumber)
+    // }
 
     const answers = [userName.classList.contains('wrong'),email.classList.contains('wrong'),phoneNumber.classList.contains('wrong')]
     if(answers.some(elem => elem === true)){
@@ -68,7 +68,7 @@ const checkInputs = function(){
         setTimeout(() =>{
             nextPage()
         }, 1000);
-        new CreateObject(userNameValue)
+        // new CreateObject(userNameValue, emailValue, phoneNumberValue)
     }
 }
 
@@ -127,9 +127,11 @@ const nextPage = function(){
 
 
 
-class CreateObject {
-    constructor(name){
-        this.name = name;
-        console.log(this.name)
-    }
-}
+// class CreateObject {
+//     constructor(name, email , phoneNumber ){
+//         this.email= email;
+//         this.phoneNumber = phoneNumber;
+//         this.name = name;
+//         console.log(this)
+//     }
+// }

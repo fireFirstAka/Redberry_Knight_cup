@@ -37,7 +37,9 @@
 .stage_container .two{
     margin-left: 77px;
 }
-
+.stage_container_one .cube_one{
+    border: none;
+}
 .stage_container_one .cube{
     margin:auto;
     border: 1px solid black;
@@ -63,6 +65,9 @@
     color: #95939A;
 }
 
+.stage_container_one div{
+    border: none;
+}
 /* input_container */
 
 .input_container{
