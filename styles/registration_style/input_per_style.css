@@ -1,0 +1,47 @@
+@import url(/styles/registration_style/input_main_style.css);
+
+.input_container{
+    display: flex;
+    flex-direction: column;
+    width: 775px;
+    position: absolute;
+    top: 397px;
+}
+.form-control{
+    width: 775px;
+    height: 46px;
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.form-control input{
+    width: 775px;
+    max-width: 90%;
+    padding: 8px 16px;
+
+}
+.green_button{
+    visibility: hidden;
+    display: none;
+}
+.input_element{
+    border: none;
+}
+
+.wrong{
+    border: 2px solid red;
+
+}
+.correct{
+    display:block;
+    visibility: visible;
+}
+
+
+.opacity-05{
+    opacity: 0.5;
+}
+

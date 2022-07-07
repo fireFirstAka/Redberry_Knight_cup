@@ -1,6 +1,9 @@
 /* Experience_information_input_container  class */
-@import url(/styles/registration_personal_information.css);
+@import url(/styles/registration_style/input_main_style.css);
 
+#section--3{
+    background-image: url(/Picture/page_3.svg);
+}
 
 
 .experience_container{
@@ -48,40 +51,52 @@
     opacity: 0;
     display: none;
     cursor: pointer;
+    position: absolute;
 
 }
 .menu-open{
     display: block;
     opacity: 1;
-    z-index:2 ;
-
 }
 
 .menu li{
     display: flex;
     align-items: center;
-    width: 352px;
+    width: 385px;
     justify-content: space-between;
-    border: 1px solid gray;
     padding-inline: 15px;
+    position: relative;
+    background-color: white;
+    font-size: 18px;
+    font-weight: 400;
 
 }
+.level li{
+    height: 40px;
+}
+.menu li:hover{
+    font-weight: 800;
+}
 .championship{
-    position: absolute;
-    top: 88px;
-    z-index: 1;
+    margin-top: 88px;
 }
 .championship h1{
     font-size: 16px;
     font-family: Open sans;
 
 }
-
 .raddio_input{
     margin-top: 10px;
 }
 .raddio_input .no{
     margin-left: 15px;
+}
+
+
+.character img{
+    width: 100px;
+    height: 72px;
+
 }
 
 
