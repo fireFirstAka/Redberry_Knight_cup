@@ -17,6 +17,13 @@
 
 }
 
+::placeholder{
+    font-family: open sans;
+    font-weight: 400;
+    font-size: 16px;
+    color: black;
+}
+
 .form-control input{
     width: 775px;
     max-width: 90%;

@@ -36,15 +36,18 @@
 .stage_container .two{
     margin-left: 77px;
 }
-.stage_container_one .cube_one{
-    border: none;
+
+.two .cube{
+    border: 1px solid black;
 }
+
+
 .stage_container_one .cube{
     margin:auto;
-    border: 1px solid black;
     padding: 8px 15px;
     border-radius: 8px;
     font-weight: 700;
+    background-color:#E9FAF1;
 
 
 }

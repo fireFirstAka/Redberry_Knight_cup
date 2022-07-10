@@ -8,17 +8,15 @@ const email = document.querySelector('#email')
 const phoneNumber = document.querySelector('#phoneNumber')
 const data = document.querySelector('#birthDay')
 
-
-
 NextButton.addEventListener('click', function(e){
     e.preventDefault()
     checkInputs();
 })
 
-userName.value = localStorage.name;
-email.value = localStorage.email;
-phoneNumber.value = localStorage.phone;
-data.value = localStorage.data
+// userName.value = localStorage.name;
+// email.value = localStorage.email;
+// phoneNumber.value = localStorage.phone;
+// data.value = localStorage.data
 const checkInputs = function(){
     const userNameValue = userName.value.trim()
     const emailValue= email.value.trim()
@@ -26,7 +24,7 @@ const checkInputs = function(){
     const dataValue = data.value;
     const answers = []
     
-    if(5 < userNameValue.length){
+    if(2 < userNameValue.length){
      setSucces(userName)
      localStorage.setItem('name',userNameValue)
      answers.push(true)
@@ -36,18 +34,17 @@ const checkInputs = function(){
      setError(userName)
      answers.push(false)
     }
-    if(emailValue === ''){
-     setError(email)
-     answers.push(false)
-    }
-    else if(!isEmail(emailValue)) {
-     setError(email)
-     answers.push(false)
-     }else{
+    if(emailValue.slice(-12) === '@redberry.ge'){
         localStorage.setItem('email',emailValue)
          setSucces(email)
          arrayRemove(answers,false)
          answers.push(true)
+
+
+    }else{
+             setError(email)
+            answers.push(false)
+
  
      }
      if(Number(phoneNumberValue.length) < 9 || Number(phoneNumberValue.length) > 9){
@@ -96,8 +93,7 @@ const setError = function(input){
     input.classList.add('wrong')
 }
 
-function isEmail(email) {
-	return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
-}
+
+
 
 
